@@ -326,12 +326,17 @@ const referenzen: NextPage = () => {
   const items = category.map((item) => {
     return (
       <>
-        <h3 id={item.title} className="my-8 font-serif text-xl font-bold">
+        <h3
+          key={item.title}
+          id={item.title}
+          className="my-8 font-serif text-xl font-bold"
+        >
           {item.title}
         </h3>
         <div className="flex flex-nowrap gap-x-8 overflow-x-auto overflow-y-hidden">
           {item.items.map((item) => (
             <RefOverviewCard
+              key={item.title}
               image={item.image}
               title={item.title}
               categories={item.categories}
@@ -355,7 +360,7 @@ const referenzen: NextPage = () => {
       <div className="mt-20 flex gap-x-4">
         {category.map((item) => {
           return (
-            <Link href={`#${item.title}`}>
+            <Link key={item.title} href={`#${item.title}`}>
               <a className="bg-white px-4 py-3 font-serif font-bold text-black hover:bg-primary-color">
                 {item.title}
               </a>
