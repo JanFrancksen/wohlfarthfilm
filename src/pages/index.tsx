@@ -5,7 +5,7 @@ import EntryText from "../components/1_startseite/entryText";
 import References from "../components/1_startseite/References";
 import VideoHead from "../components/1_startseite/VideoHead";
 import Carousel from "../components/1_startseite/Carousel";
-import Werwirsind from "../components/1_startseite/werwirsind";
+import Werwirsind from "../components/1_startseite/Werwirsind";
 
 const Home: NextPage = () => {
   const Referenzen1 = [
