@@ -17,8 +17,8 @@ function Navbar() {
       link: "/referenzen",
     },
     {
-      name: "Making of",
-      link: "/making-of",
+      name: "Leistungen",
+      link: "/leistungen",
     },
     {
       name: "Über uns",
