@@ -63,7 +63,6 @@ function Navbar() {
         {navItems.map((item, index) => {
           return (
             <>
-              {" "}
               <li
                 key={item.name}
                 onClick={() => {
