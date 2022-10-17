@@ -8,6 +8,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Aleo&display=optional"
           rel="stylesheet"
         />
+        <link rel="icon" href="/images/favicon.png" />
       </Head>
       <body>
         <Main />

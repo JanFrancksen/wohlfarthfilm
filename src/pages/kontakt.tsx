@@ -6,9 +6,19 @@ import ImageHead from "../components/0_common/ImageHead";
 const Kontakt: NextPage = () => {
   return (
     <div>
-      <ImageHead image="" title="Kontakt" />
+      <ImageHead
+        image="/images/ueber-uns/IMG_7278-2-scaled.jpg"
+        title="Kontakt"
+      />
       <div className="mx-auto my-20 grid w-3/4 grid-cols-2">
         <div>
+          <Image
+            src="/images/kontakt/Deutschlandkarte1000px-min.png"
+            alt=""
+            width={300}
+            height={500}
+            className="invert"
+          />
           <h2 className="font-serif text-xl">Bürozeiten</h2>
           <p className="mb-4">
             Montag - Freitag <br />

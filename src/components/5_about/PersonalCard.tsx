@@ -9,7 +9,13 @@ const PersonalCard = ({ image, title, position, mail }: any) => {
         <p>{position}</p>
         <p className="underline">{mail}</p>
       </span>
-      <Image src={image} alt={title} />
+      <Image
+        src={image}
+        alt={title}
+        width={600}
+        height={400}
+        objectFit="cover"
+      />
     </a>
   );
 };

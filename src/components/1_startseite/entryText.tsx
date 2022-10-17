@@ -2,7 +2,7 @@ import React from "react";
 
 const EntryText = () => {
   return (
-    <section className="my-20 grid gap-x-4 px-8 sm:grid-cols-2">
+    <section className="my-20 mx-auto grid w-3/4 gap-x-4 px-8 sm:grid-cols-2">
       <h1 className="font-serif text-2xl font-bold sm:text-right md:text-3xl">
         wohlfarth film
       </h1>
