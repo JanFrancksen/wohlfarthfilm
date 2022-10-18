@@ -34,3 +34,54 @@ html {
     @apply mb-4 mt-2 border-2 bg-transparent px-4 py-2 focus:rounded-none focus:border-primary-color focus:outline-none;
   }
 }
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+:root {
+  --gradient-shadow: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+}
+
+.shd {
+  position: relative;
+  background: linear-gradient(0deg, #000, #262626);
+}
+
+.shd:after,
+.shd:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: var(--gradient-shadow);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+.shd:after {
+  filter: blur(20px);
+}

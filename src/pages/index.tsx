@@ -62,7 +62,6 @@ const Home: NextPage = () => {
       </Head>
       <main className="">
         <VideoHead />
-        <Carousel />
         <EntryText />
         <References items={Referenzen1} />
         <Werwirsind />
