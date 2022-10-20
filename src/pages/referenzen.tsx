@@ -13,7 +13,7 @@ const referenzen: NextPage = () => {
         Unsere Filme können bewerben oder erklären. Vor allem transportieren
         unsere Filme aber Emotionen.
       </h2>
-      <div className="mt-80">
+      <div className="">
         {refData.map((item: any) => (
           <ScrollBox key={item.title} item={item} />
         ))}
