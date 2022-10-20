@@ -15,7 +15,7 @@ const referenzen: NextPage = () => {
       </h2>
       <div className="mt-80">
         {refData.map((item: any) => (
-          <ScrollBox item={item} />
+          <ScrollBox key={item.title} item={item} />
         ))}
       </div>
     </div>
