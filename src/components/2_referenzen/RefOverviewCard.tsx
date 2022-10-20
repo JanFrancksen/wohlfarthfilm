@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { string } from "zod";
 
 interface card {
   title: string;
@@ -11,7 +10,7 @@ interface card {
 }
 const RefOverviewCard = ({ title, image, categories, link }: card) => {
   return (
-    <article className=" w-[400px] flex-none">
+    <article className=" w-60 flex-none snap-start sm:w-[400px]">
       <Link href={link}>
         <a className="flex flex-col gap-4">
           <Image

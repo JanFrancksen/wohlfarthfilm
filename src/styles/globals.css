@@ -6,6 +6,11 @@ html {
   background: black;
   color: white;
   scroll-behavior: smooth;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2) 0.5px,
+    black 0.5px
+  );
+  background-size: 10px 10px;
 }
 
 * {
@@ -64,7 +69,6 @@ html {
 }
 
 .shd {
-  position: relative;
   background: linear-gradient(0deg, #000, #262626);
 }
 

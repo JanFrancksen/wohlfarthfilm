@@ -4,9 +4,13 @@ import React, { useState } from "react";
 import logo from "../../images/logo.png";
 import NavItem from "./NavItem";
 import NavUser from "./Navuser";
+import { signIn, signOut, useSession } from "next-auth/react";
+
 import { CgMenuRight } from "react-icons/cg";
 
 function Navbar() {
+  const { data: session } = useSession();
+
   const navItems = [
     {
       name: "Start",
@@ -40,17 +44,15 @@ function Navbar() {
     <>
       <button
         onClick={() => setNavActive(!navActive)}
-        className="absolute top-4 right-4 z-50 block aspect-square w-8 sm:hidden"
-        aria-conrols="primary-navigation"
-        aria-expanded="false"
+        className="fixed top-4 right-4 z-50 inline-block h-8 w-8 sm:hidden"
       >
         <CgMenuRight className="h-8 w-8" />
-        <span className="sr-only">Menu</span>
       </button>
       <nav
+        id="primary-navigation"
         className={`${
           navActive ? "activeNav" : ""
-        }fixed top-0 right-0 z-40 h-screen w-4/5 items-center justify-between bg-wf-black bg-opacity-70 px-4 font-serif text-wf-white backdrop-blur-sm sm:left-0 sm:h-auto sm:w-full sm:flex-row`}
+        } fixed top-0 right-0 z-40 h-screen w-screen items-center justify-between bg-black bg-opacity-70 px-4 backdrop-blur-sm transition-all sm:h-auto sm:w-screen`}
       >
         <div className="hidden sm:inline">
           <Link href={"/"}>
@@ -61,11 +63,8 @@ function Navbar() {
         </div>
 
         <ul
+          className="flex w-full flex-col items-center justify-center sm:w-auto sm:flex-row"
           data-visible="false"
-          id="primary-navigation"
-          className={`${
-            navActive ? "activeNav " : ""
-          }flex-col flex sm:flex-row`}
         >
           {navItems.map((item, index) => {
             return (
@@ -82,6 +81,23 @@ function Navbar() {
               </>
             );
           })}
+
+          {session ? (
+            <div>
+              <Link href="/profile">
+                <a className="navItem">Downloads</a>
+              </Link>
+              <button onClick={() => signOut()} className="navItem">
+                logout
+              </button>
+            </div>
+          ) : (
+            <div>
+              <button className="navItem" onClick={() => signIn()}>
+                Login
+              </button>
+            </div>
+          )}
         </ul>
       </nav>
     </>

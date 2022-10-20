@@ -13,23 +13,15 @@ const NavUser = () => {
       {session ? (
         <div>
           <Link href="/profile">
-            <a className="hover:bg-cb_primary hover:text-cb_white dark:hover:bg-cb_secondary mr-4 rounded-full p-2 transition-colors">
-              {session.user?.email}
-            </a>
+            <a className="navItem">Downloads</a>
           </Link>
-          <button
-            onClick={() => signOut()}
-            className="hover:bg-cb_primary hover:text-cb_white dark:hover:bg-cb_secondary rounded-full p-2 transition-colors"
-          >
+          <button onClick={() => signOut()} className="navItem">
             logout
           </button>
         </div>
       ) : (
         <div>
-          <button
-            className="font-serif font-bold uppercase"
-            onClick={() => signIn()}
-          >
+          <button className="navItem" onClick={() => signIn()}>
             Login
           </button>
         </div>

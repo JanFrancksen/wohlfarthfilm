@@ -1,7 +1,11 @@
 import { NextPage } from "next";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import RefOverviewCard from "../components/2_referenzen/RefOverviewCard";
+import {
+  IoChevronForwardCircleOutline,
+  IoChevronBackCircleOutline,
+} from "react-icons/io5";
 
 const referenzen: NextPage = () => {
   const category = [
@@ -324,17 +328,71 @@ const referenzen: NextPage = () => {
     },
   ];
 
+  const scrl = useRef<any | null>(null);
+  const [scrollX, setscrollX] = useState(0); // For detecting start scroll postion
+  const [scrollEnd, setscrollEnd] = useState(false); // For detecting end of scrolling
+
+  const slide = (shift: number) => {
+    scrl.current!.scrollLeft += shift;
+    setscrollX(scrollX + shift); // Updates the latest scrolled postion
+    console.log("first");
+  };
+
+  const scrollCheck = () => {
+    setscrollX(scrl.current!.scrollLeft);
+    if (
+      Math.floor(scrl.current!.scrollWidth - scrl.current!.scrollLeft) <=
+      scrl.current!.offsetWidth
+    ) {
+      setscrollEnd(true);
+    } else {
+      setscrollEnd(false);
+    }
+  };
+
+  useEffect(() => {
+    if (
+      scrl.current &&
+      scrl?.current?.scrollWidth === scrl?.current?.offsetWidth
+    ) {
+      setscrollEnd(true);
+    } else {
+      setscrollEnd(false);
+    }
+  }, [scrl?.current?.scrollWidth, scrl?.current?.offsetWidth]);
+
   const items = category.map((item) => {
     return (
       <>
-        <h3
-          key={item.title}
-          id={item.title}
-          className="my-8 font-serif text-xl font-bold"
+        <div className="flex justify-between">
+          <h3
+            key={item.title}
+            id={item.title}
+            className="my-8 font-serif text-xl font-bold"
+          >
+            {item.title}
+          </h3>
+          <div className="flex gap-x-4">
+            <button
+              onClick={() => slide(-288)}
+              className={`${scrollX === 0 && "text-gray-700"} text-lg `}
+            >
+              <IoChevronBackCircleOutline />
+            </button>
+            <button
+              onClick={() => slide(288)}
+              className={`${scrollEnd && "text-gray-700"} text-lg `}
+            >
+              <IoChevronForwardCircleOutline />
+            </button>
+          </div>
+        </div>
+
+        <div
+          className="flex snap-x snap-mandatory flex-nowrap gap-x-8 overflow-x-auto overflow-y-hidden scroll-smooth"
+          ref={scrl}
+          onScroll={scrollCheck}
         >
-          {item.title}
-        </h3>
-        <div className="flex flex-nowrap gap-x-8 overflow-x-auto overflow-y-hidden">
           {item.items.map((item) => (
             <RefOverviewCard
               key={item.title}
@@ -350,7 +408,7 @@ const referenzen: NextPage = () => {
   });
 
   return (
-    <div className="mx-auto my-40 w-3/4">
+    <div className="mx-auto my-20 w-3/4 sm:my-40">
       <h1 className="col-span-2 font-serif text-3xl font-bold">
         Unsere Referenzen{" "}
       </h1>
@@ -358,7 +416,7 @@ const referenzen: NextPage = () => {
         Unsere Filme können bewerben oder erklären. Vor allem transportieren
         unsere Filme aber Emotionen.
       </h2>
-      <div className="mt-20 flex gap-x-4">
+      <div className="mt-20 flex flex-wrap gap-4">
         {category.map((item) => {
           return (
             <Link key={item.title} href={`#${item.title}`}>
