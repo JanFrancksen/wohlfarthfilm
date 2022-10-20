@@ -3,7 +3,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import logo from "../../images/logo.png";
 import NavItem from "./NavItem";
-import NavUser from "./Navuser";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 import { CgMenuRight } from "react-icons/cg";
@@ -52,7 +51,7 @@ function Navbar() {
         id="primary-navigation"
         className={`${
           navActive ? "activeNav" : ""
-        } fixed top-0 right-0 z-40 h-screen w-screen items-center justify-between bg-black bg-opacity-70 px-4 backdrop-blur-sm transition-all sm:h-auto sm:w-screen`}
+        } fixed top-0 right-0 z-40 h-screen w-screen items-center justify-between bg-black bg-opacity-70 px-4 backdrop-blur-sm sm:left-0 sm:h-auto `}
       >
         <div className="hidden sm:inline">
           <Link href={"/"}>

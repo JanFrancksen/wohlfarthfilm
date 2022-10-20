@@ -19,6 +19,8 @@ const RefOverviewCard = ({ title, image, categories, link }: card) => {
             width={400}
             height={300}
             objectFit="cover"
+            placeholder="blur"
+            blurDataURL={image}
           />
           <h3 className="font-serif text-lg font-bold">{title}</h3>
           <div className="flex gap-x-4">
