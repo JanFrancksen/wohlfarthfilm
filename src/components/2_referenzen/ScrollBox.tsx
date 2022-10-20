@@ -63,7 +63,7 @@ const ScrollBox = ({ item }: any) => {
         ref={scrl}
         onScroll={scrollCheck}
       >
-        {item.map((item: any) => (
+        {item.items.map((item: any) => (
           <RefOverviewCard
             key={item.index}
             image={item.image}
