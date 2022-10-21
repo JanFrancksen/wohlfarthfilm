@@ -11,7 +11,7 @@ const about: NextPage = () => {
         title="Über Uns"
       />
       <EntryText />
-      <div className="mx-auto grid w-3/4 grid-cols-2 gap-4">
+      <div className="mx-auto grid w-3/4 gap-8 sm:grid-cols-2 sm:gap-4">
         <PersonalCard
           image="/images/personal/Stefan_linie.webp"
           title="Stefan Ganseforth"

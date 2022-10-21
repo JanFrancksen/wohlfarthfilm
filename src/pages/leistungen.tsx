@@ -6,7 +6,7 @@ import ref from "../images/Referenzen/ref.jpg";
 
 const leistungen: NextPage = () => {
   return (
-    <div className="mx-auto my-40 grid w-3/4 grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+    <div className="mx-auto my-20 grid w-3/4 grid-cols-1 gap-x-4 gap-y-8 sm:my-40 sm:grid-cols-2">
       <h1 className="font-serif text-3xl font-bold leading-none sm:col-span-2">
         Was wir können
       </h1>

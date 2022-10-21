@@ -10,7 +10,7 @@ const Kontakt: NextPage = () => {
         image="/images/ueber-uns/IMG_7278-2-scaled.jpg"
         title="Kontakt"
       />
-      <div className="mx-auto my-20 grid w-3/4 grid-cols-2">
+      <div className="mx-auto grid w-3/4 sm:my-20 sm:grid-cols-2">
         <div>
           <Image
             src="/images/kontakt/Deutschlandkarte1000px-min.png"

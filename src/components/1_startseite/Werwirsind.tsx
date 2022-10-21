@@ -2,7 +2,7 @@ import React from "react";
 
 const Werwirsind = () => {
   return (
-    <section className="mx-auto w-3/4 items-center text-center sm:w-2/3 md:w-1/2">
+    <section className="mx-auto w-3/4 items-center sm:w-2/3 sm:text-center md:w-1/2">
       <div className="font-serif text-3xl font-bold">wer wir sind?</div>
       <div>
         Wir machen Filme, die passen. Und Spaß machen sie auch. Uns und unseren

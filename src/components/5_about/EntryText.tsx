@@ -14,13 +14,13 @@ const EntryText = () => {
   }
 
   return (
-    <div className="mx-auto my-20 grid w-3/4 grid-cols-2 items-center gap-8">
+    <div className="mx-auto my-20 grid w-3/4 items-center gap-8 sm:grid-cols-2">
       <h2 className="text-3xl font-bold">
         <span
           className={
             value === 1
-              ? "relative px-1 before:absolute before:bottom-3 before:left-0 before:right-0 before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
-              : "relative px-1 before:absolute before:bottom-3 before:left-0 before:right-full before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
+              ? "relative px-1 before:absolute before:bottom-2 before:left-0 before:right-0 before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
+              : "relative px-1 before:absolute before:bottom-2 before:left-0 before:right-full before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
           }
         >
           zuhören.
@@ -29,8 +29,8 @@ const EntryText = () => {
         <span
           className={
             value === 2
-              ? "relative px-1 before:absolute before:bottom-3 before:left-0 before:right-0 before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
-              : "relative px-1 before:absolute before:bottom-3 before:left-0 before:right-full before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
+              ? "relative px-1 before:absolute before:bottom-2 before:left-0 before:right-0 before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
+              : "relative px-1 before:absolute before:bottom-2 before:left-0 before:right-full before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
           }
         >
           verstehen.
@@ -39,8 +39,8 @@ const EntryText = () => {
         <span
           className={
             value === 3
-              ? "relative px-1 before:absolute before:bottom-3 before:left-0 before:right-0 before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
-              : "relative px-1 before:absolute before:bottom-3 before:left-0 before:right-full before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
+              ? "relative px-1 before:absolute before:bottom-2 before:left-0 before:right-0 before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
+              : "relative px-1 before:absolute before:bottom-2 before:left-0 before:right-full before:-z-10 before:h-2 before:bg-red-500 before:transition-all"
           }
         >
           machen.
