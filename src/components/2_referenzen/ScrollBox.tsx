@@ -39,9 +39,12 @@ const ScrollBox = ({ item }: any) => {
   }, [scrl?.current?.scrollWidth, scrl?.current?.offsetWidth]);
 
   return (
-    <>
+    <div className="my-20">
       <div className="flex justify-between">
-        <h3 className="my-8 font-serif text-xl font-bold">{item.title}</h3>
+        <div className="my-8 flex flex-col justify-center">
+          <h3 className=" font-serif text-xl font-bold">{item.title}</h3>
+          {item.subtitle && <h4>{item.subtitle}</h4>}
+        </div>
         <div className="flex gap-x-4">
           <button
             onClick={() => slide(-288)}
@@ -73,7 +76,7 @@ const ScrollBox = ({ item }: any) => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

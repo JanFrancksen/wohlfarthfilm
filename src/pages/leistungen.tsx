@@ -2,7 +2,6 @@ import { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import ref from "../images/Referenzen/ref.jpg";
 
 const leistungen: NextPage = () => {
   return (
@@ -11,7 +10,12 @@ const leistungen: NextPage = () => {
         Was wir können
       </h1>
       <article className="flex flex-col gap-4">
-        <Image src={ref} alt=" " placeholder="blur" />
+        <Image
+          src="/images/referenzen/Film/agron-min-2.png"
+          alt=" "
+          width={400}
+          height={300}
+        />
         <h2 className="font-serif text-xl font-bold">Filme</h2>
         <p>
           Es steckt in unserem Namen, es steckt in unserem Blut. Wir machen
@@ -19,14 +23,19 @@ const leistungen: NextPage = () => {
           Egal, ob Lebensmittel, Maschinen, Personen oder Landschaften. Wir
           stellen Ihre Motive in bester Qualität dar.
         </p>
-        <Link href="/referenzen/filme">
+        <Link href="/leistungen/filme">
           <a className="self-start border-2 border-primary-color px-4 py-3 transition-colors hover:bg-primary-color">
             mehr erfahren ...
           </a>
         </Link>
       </article>
       <article className="flex flex-col gap-4">
-        <Image src={ref} alt=" " placeholder="blur" />
+        <Image
+          src="/images/referenzen/Film/agron-min-2.png"
+          alt=" "
+          width={400}
+          height={300}
+        />
         <h2 className="font-serif text-xl font-bold">Fotos</h2>
         <p>
           Es steckt in unserem Namen, es steckt in unserem Blut. Wir machen
@@ -34,41 +43,8 @@ const leistungen: NextPage = () => {
           Egal, ob Lebensmittel, Maschinen, Personen oder Landschaften. Wir
           stellen Ihre Motive in bester Qualität dar.
         </p>
-        <Link href="/referenzen/filme">
+        <Link href="/leistungen/filme">
           <a className="self-start border-2 border-primary-color px-4 py-3 transition-colors hover:bg-primary-color">
-            {" "}
-            mehr erfahren ...
-          </a>
-        </Link>
-      </article>
-      <article className="flex flex-col gap-4">
-        <Image src={ref} alt=" " placeholder="blur" />
-        <h2 className="font-serif text-xl font-bold">Marken</h2>
-        <p>
-          Es steckt in unserem Namen, es steckt in unserem Blut. Wir machen
-          Filme. Imagefilme, Unternehmensfilme, Produktfilme und viele mehr.
-          Egal, ob Lebensmittel, Maschinen, Personen oder Landschaften. Wir
-          stellen Ihre Motive in bester Qualität dar.
-        </p>
-        <Link href="/referenzen/filme">
-          <a className="self-start border-2 border-primary-color px-4 py-3 transition-colors hover:bg-primary-color">
-            {" "}
-            mehr erfahren ...
-          </a>
-        </Link>
-      </article>
-      <article className="flex flex-col gap-4">
-        <Image src={ref} alt=" " placeholder="blur" />
-        <h2 className="font-serif text-xl font-bold">Grafik</h2>
-        <p>
-          Es steckt in unserem Namen, es steckt in unserem Blut. Wir machen
-          Filme. Imagefilme, Unternehmensfilme, Produktfilme und viele mehr.
-          Egal, ob Lebensmittel, Maschinen, Personen oder Landschaften. Wir
-          stellen Ihre Motive in bester Qualität dar.
-        </p>
-        <Link href="/referenzen/filme">
-          <a className="self-start border-2 border-primary-color px-4 py-3 transition-colors hover:bg-primary-color">
-            {" "}
             mehr erfahren ...
           </a>
         </Link>

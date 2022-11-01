@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+body {
   background: black;
   color: white;
   scroll-behavior: smooth;
-  background-image: radial-gradient(
-    rgba(255, 255, 255, 0.2) 0.5px,
-    black 0.5px
-  );
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, black 0.5px);
   background-size: 10px 10px;
 }
 
@@ -32,60 +29,18 @@ html {
 
   #primary-navigation {
     display: none;
-    @apply sm:flex;
+    @apply md:flex;
   }
 
   .inputField {
     @apply mb-4 mt-2 border-2 bg-transparent px-4 py-2 focus:rounded-none focus:border-primary-color focus:outline-none;
   }
-}
 
-@keyframes animate {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 300% 0;
-  }
-  100% {
-    background-position: 0 0;
+  .expandMenu > ul {
+    @apply sm:hidden;
   }
 }
 
-:root {
-  --gradient-shadow: linear-gradient(
-    45deg,
-    #fb0094,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000,
-    #fb0094,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000
-  );
-}
-
-.shd {
-  background: linear-gradient(0deg, #000, #262626);
-}
-
-.shd:after,
-.shd:before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background: var(--gradient-shadow);
-  background-size: 400%;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  z-index: -1;
-  animation: animate 20s linear infinite;
-}
-
-.shd:after {
-  filter: blur(20px);
+.expandMenu:hover > ul {
+  @apply sm:inline;
 }

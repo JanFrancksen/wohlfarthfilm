@@ -1,11 +1,10 @@
 import { NextPage } from "next";
 import React from "react";
-import ScrollBox from "../components/2_referenzen/ScrollBox";
-import { refData } from "../components/2_referenzen/ReferenzenData";
+import Card from "../components/0_common/Card";
 
 const referenzen: NextPage = () => {
   return (
-    <div className="mx-auto my-20 w-3/4 sm:my-40">
+    <div className="mx-auto my-20 grid w-3/4 grid-cols-2 gap-4 sm:my-40">
       <h1 className="col-span-2 font-serif text-3xl font-bold">
         Unsere Referenzen
       </h1>
@@ -13,11 +12,18 @@ const referenzen: NextPage = () => {
         Unsere Filme können bewerben oder erklären. Vor allem transportieren
         unsere Filme aber Emotionen.
       </h2>
-      <div className="">
-        {refData.map((item: any) => (
-          <ScrollBox key={item.title} item={item} />
-        ))}
-      </div>
+      <Card
+        image="/images/referenzen/Film/referenz-1.jpg"
+        title="Filme"
+        content="Sehen Sie hier einen Auszug der Filme die wir für unsere Kunden erstellt haben ..."
+        link="/referenzen/filme"
+      />
+      <Card
+        image="/images/referenzen/Foto/IMGL3656-1-scaled.jpg"
+        title="Fotos"
+        content="Hier finden Sie eine Auswahl an profiessionellen Fotos, von uns für unsere Kunden erstellt ..."
+        link="/referenzen/fotografie"
+      />
     </div>
   );
 };

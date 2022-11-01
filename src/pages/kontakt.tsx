@@ -30,7 +30,7 @@ const Kontakt: NextPage = () => {
             49692 Cappeln
           </p>
           <p>
-            Telefon:{" "}
+            Telefon:
             <a
               href="tel:04478 95 49 000"
               className="transition-colors hover:text-primary-color"
@@ -38,7 +38,7 @@ const Kontakt: NextPage = () => {
               04478 95 49 000
             </a>
             <br />
-            Mail:{" "}
+            Mail:
             <a
               href="mailto:kontakt@wohlfarth-film.de"
               className="transition-colors hover:text-primary-color"

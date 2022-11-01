@@ -28,7 +28,7 @@ const RefOverviewCard = ({ title, image, categories, link }: card) => {
               return (
                 <span
                   key={item}
-                  className="bg-primary-color px-3 py-2 text-white"
+                  className="bg-white px-2 py-1  text-xs text-black transition-colors hover:bg-primary-color hover:text-white"
                 >
                   {item}
                 </span>

@@ -6,6 +6,7 @@ import References from "../components/1_startseite/References";
 import VideoHead from "../components/1_startseite/VideoHead";
 import Carousel from "../components/1_startseite/Carousel";
 import Werwirsind from "../components/1_startseite/Werwirsind";
+import Grid from "../components/1_startseite/grid";
 
 const Home: NextPage = () => {
   const Referenzen1 = [
@@ -50,7 +51,7 @@ const Home: NextPage = () => {
     {
       title: "Portrait",
       image: "/images/referenzen/Film/preisträger-lebenswerk-min.png",
-      link: "",
+      link: "/leistungen/portrait",
     },
   ];
 
@@ -63,6 +64,8 @@ const Home: NextPage = () => {
       <main className="">
         <VideoHead />
         <EntryText />
+        <Grid />
+
         <References items={Referenzen1} />
         <Werwirsind />
         <References items={Referenzen2} />

@@ -1,7 +1,13 @@
 import Link from "next/link";
 import React from "react";
 
-const NavItem = ({ name, link, active }: any) => {
+interface NavItemInt {
+  name: string;
+  link: string;
+  active: boolean;
+}
+
+const NavItem = ({ name, link, active }: NavItemInt) => {
   return (
     <Link href={link}>
       <a className={`navItem ${active ? "active" : ""}`}>{name}</a>

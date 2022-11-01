@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Image from "next/image";
 import React from "react";
 import ImageHead from "../components/0_common/ImageHead";
 import EntryText from "../components/5_about/EntryText";
@@ -25,16 +26,60 @@ const about: NextPage = () => {
           mail="mailto:wohlfarth@wohlfarth-film.de"
         />
         <PersonalCard
+          image="/images/personal/Katha_linie.webp"
+          title="Anne Scheele"
+          position="Büro & Social Media"
+          mail="mailto:scheele@wohlfarth-film.de"
+        />
+        <PersonalCard
+          image="/images/personal/Julz_linie.webp"
+          title="Nico Janßen"
+          position="Schnitt"
+          mail="mailto:janßen@wohlfarth-film.de"
+        />
+        <PersonalCard
+          image="/images/personal/Julz_linie.webp"
+          title="Ischil ..."
+          position="Schnitt"
+          mail="mailto:janßen@wohlfarth-film.de"
+        />
+        <PersonalCard
+          image="/images/personal/Katha_linie.webp"
+          title="..."
+          position="..."
+          mail="mailto:scheele@wohlfarth-film.de"
+        />
+        <PersonalCard
           image="/images/personal/Julz_linie.webp"
           title="Jan Francksen"
           position="Grafik"
           mail="mailto:francksen@wohlfarth-film.de"
         />
-        <PersonalCard
-          image="/images/personal/Katha_linie.webp"
-          title="Anne Scheele"
-          position="Büro & Social Media"
-          mail="mailto:scheele@wohlfarth-film.de"
+      </div>
+      <div className="mx-auto my-20 grid w-3/4 grid-cols-3 gap-x-8">
+        <h2 className="col-span-3 place-self-center font-serif text-xl font-bold">
+          Mitglied im:
+        </h2>
+        <Image
+          src="/images/referenzen/Kundenlogos/om.png"
+          alt=""
+          width={400}
+          height={300}
+          objectFit="contain"
+        />
+        <Image
+          src="/images/referenzen/Kundenlogos/bvmw.png"
+          alt=""
+          width={400}
+          height={300}
+          objectFit="contain"
+        />
+        <Image
+          src="/images/referenzen/Kundenlogos/bni.png"
+          alt=""
+          width={400}
+          height={300}
+          objectFit="contain"
         />
       </div>
     </div>

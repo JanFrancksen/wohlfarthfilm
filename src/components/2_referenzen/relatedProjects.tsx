@@ -21,7 +21,7 @@ const RelatedProjects = ({
       <article>
         <Link href={link1}>
           <a>
-            <Image src={image1} alt={title1} />
+            <Image src={image1} alt={title1} width={600} height={400} />
             <h5 className="mb-4 font-serif text-lg font-bold">{title1}</h5>
             <button className="border-2 border-primary-color px-4 py-3 hover:bg-primary-color">
               jetzt ansehen ...
@@ -32,7 +32,7 @@ const RelatedProjects = ({
       <article>
         <Link href={link2}>
           <a>
-            <Image src={image2} alt={title2} />
+            <Image src={image2} alt={title2} width={600} height={400} />
             <h5 className="mb-4 font-serif text-lg font-bold">{title2}</h5>
             <button className="border-2 border-primary-color px-4 py-3 hover:bg-primary-color">
               jetzt ansehen ...
@@ -43,7 +43,7 @@ const RelatedProjects = ({
       <article>
         <Link href={link3}>
           <a>
-            <Image src={image3} alt={title3} />
+            <Image src={image3} alt={title3} width={600} height={400} />
             <h5 className="mb-4 font-serif text-lg font-bold">{title3}</h5>
             <button className="border-2 border-primary-color px-4 py-3 hover:bg-primary-color">
               jetzt ansehen ...
